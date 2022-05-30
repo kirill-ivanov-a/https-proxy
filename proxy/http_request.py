@@ -5,6 +5,8 @@ from http_parser.pyparser import HttpParser
 import proxy.config as config
 from proxy.http_socket_reader import HttpSocketReader
 
+__all__ = ["HttpRequest"]
+
 
 class HttpRequest:
     def __init__(
