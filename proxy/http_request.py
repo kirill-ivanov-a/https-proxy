@@ -19,11 +19,11 @@ class HttpRequest:
         self.buffer_size = buffer_size
         self.raw_data = HttpSocketReader(sock).recv_data()
 
-        p = HttpParser()
-        p.execute(self.raw_data, len(self.raw_data))
+        parser = HttpParser()
+        parser.execute(self.raw_data, len(self.raw_data))
 
-        self.method = p.get_method()
-        self.headers = p.get_headers()
+        self.method = parser.get_method()
+        self.headers = parser.get_headers()
         self.secure_connection_required = self.method == "CONNECT"
 
         if ":" in self.headers["Host"]:
