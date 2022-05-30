@@ -1,6 +1,7 @@
 # Simple proxy server
 ## About
 A simple http(s) proxy server implementation in Python.
+![](https://github.com/kirill-ivanov-a/https-proxy/blob/main/examples/httpbin.gif)
 ## Requirements
 
 - Python 3.x
